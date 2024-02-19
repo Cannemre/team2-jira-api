@@ -1,6 +1,6 @@
-# Inar User Management API Testing Framework
+# JIRA API Testing Framework
 
-This project is a testing framework for the Inar User Management API. It uses Maven for dependency management, Cucumber for behavior-driven development (BDD), Java as the programming language, RestAssured for API interaction, and Log4J2 for logging.
+This project is a testing framework for the JIRA API. It uses Maven for dependency management, Cucumber for behavior-driven development (BDD), Java as the programming language, RestAssured for API interaction, and Log4J2 for logging.
 
 ## Getting Started
 
@@ -39,7 +39,7 @@ Alternatively, you can run the tests directly from your IDE by running the Cucum
 To execute the tests with the Cucumber Runner, you can either run the `TestRunner` class directly from your IDE or use Maven.
 
 From the IDE:
-- Navigate to `src/test/java/com/inar/reqres/usermanagement/runner/TestRunner.java`.
+- Navigate to `src/test/java/com/inar/jiraAPI/runner/TestRunner.java`.
 - And run it.
 
 ### Project Structure
