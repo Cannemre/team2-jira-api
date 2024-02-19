@@ -22,7 +22,7 @@ The framework reads the base URI and other configuration settings from `applicat
 
 Example `application.properties` content:
 
-base.uri=https://reqres.in/api
+base.uri=https://inaracademyteam2.atlassian.net
 
 
 ### Running Tests
@@ -53,7 +53,7 @@ From the IDE:
 - `ConfigManager`: Utility class for reading properties from the configuration file.
 - `TestContext`: Context class used for sharing data between steps.
 - `Hooks`: Class containing `@Before` and `@After` methods for setting up preconditions and postconditions for the tests.
-- `BaseSteps`, `CommonSteps`, `UserDeletionSteps`, `UserValidationSteps`: Step definition classes for the Cucumber steps.
+- `BaseSteps`, `CommonSteps`: Step definition classes for the Cucumber steps.
 - `User`: POJO class representing the user entity.
 
 ### Logs
@@ -72,9 +72,7 @@ Please read `CONTRIBUTING.md` for details on our code of conduct, and the proces
 
 This project is licensed under the MIT License - see the `LICENSE.md` file for details.
 
-## Authors
 
-- **Hamza Cetin** - *Initial work* - [HamzaCetin](https://github.com/hamzaalictn)
 
 
 
