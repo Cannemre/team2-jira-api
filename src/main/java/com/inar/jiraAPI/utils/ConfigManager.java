@@ -2,7 +2,6 @@ package com.inar.jiraAPI.utils;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import java.io.InputStream;
 import java.util.Properties;
 
