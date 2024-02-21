@@ -1,0 +1,19 @@
+{
+  "accountId": "63d3afe30d930a766df14ce5",
+  "avatarUrls": {
+    "48x48": "https://secure.gravatar.com/avatar/705094880de46372f99d32db84f9597c?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Fdefault-avatar-3.png",
+    "24x24": "https://secure.gravatar.com/avatar/705094880de46372f99d32db84f9597c?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Fdefault-avatar-3.png",
+    "16x16": "https://secure.gravatar.com/avatar/705094880de46372f99d32db84f9597c?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Fdefault-avatar-3.png",
+    "32x32": "https://secure.gravatar.com/avatar/705094880de46372f99d32db84f9597c?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Fdefault-avatar-3.png"
+  },
+  "displayName": "ALİ ERKAM İMAM",
+  "accountType": "atlassian",
+  "self": "https://inaracademyteam2.atlassian.net/rest/api/3/user?accountId=63d3afe30d930a766df14ce5",
+  "active": true,
+  "locale": "en_GB",
+  "emailAddress": null,
+  "timeZone": null,
+  "groups": null,
+  "applicationRoles": null,
+  "expand": null
+}

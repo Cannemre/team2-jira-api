@@ -8,7 +8,9 @@ import java.util.Map;
 
 public class APIUtils {
 
-    public static Response sendGetRequest(RequestSpecification request, String url){
+    protected static RequestSpecification request;
+
+    public static Response sendGetRequest(String url){
         return request
                 .contentType(ContentType.JSON)
                 .when()
@@ -16,7 +18,7 @@ public class APIUtils {
                 .then().log().all()
                 .extract().response();
     }
-    public static Response sendGetRequest(RequestSpecification request, String url, Map<String,String> queryParams){
+    public static Response sendGetRequest(String url, Map<String,String> queryParams){
         return request
                 .contentType(ContentType.JSON)
                 .queryParams(queryParams)
@@ -25,7 +27,7 @@ public class APIUtils {
                 .then().log().all()
                 .extract().response();
     }
-    public static Response sendGetRequest(RequestSpecification request, String url, Object payload){
+    public static Response sendGetRequest(String url, Object payload){
         return request
                 .contentType(ContentType.JSON)
                 .body(payload)
@@ -34,7 +36,7 @@ public class APIUtils {
                 .then().log().all()
                 .extract().response();
     }
-    public static Response sendGetRequest(RequestSpecification request, String url, String[] pathParams){
+    public static Response sendGetRequest(String url, String[] pathParams){
         return request
                 .contentType(ContentType.JSON)
                 .pathParam(pathParams[0],pathParams[1])
@@ -43,7 +45,7 @@ public class APIUtils {
                 .then().log().all()
                 .extract().response();
     }
-    public static Response sendPostRequest(RequestSpecification request, String url, Map<String,String> queryParams){
+    public static Response sendPostRequest(String url, Map<String,String> queryParams){
         return request
                 .contentType(ContentType.JSON)
                 .queryParams(queryParams)
@@ -52,7 +54,7 @@ public class APIUtils {
                 .then().log().all()
                 .extract().response();
     }
-    public static Response sendPostRequest(RequestSpecification request, String url, Object payload){
+    public static Response sendPostRequest(String url, Object payload){
         return request
                 .contentType(ContentType.JSON)
                 .body(payload)
@@ -61,7 +63,7 @@ public class APIUtils {
                 .then().log().all()
                 .extract().response();
     }
-    public static Response sendPostRequest(RequestSpecification request, String url, Map<String,String> queryParams,Object payload){
+    public static Response sendPostRequest(String url, Map<String,String> queryParams,Object payload){
         return request
                 .contentType(ContentType.JSON)
                 .queryParams(queryParams)
@@ -71,7 +73,7 @@ public class APIUtils {
                 .then().log().all()
                 .extract().response();
     }
-    public static Response sendPostRequest(RequestSpecification request, String url, String[] pathParams,Object payload){
+    public static Response sendPostRequest(String url, String[] pathParams,Object payload){
         return request
                 .contentType(ContentType.JSON)
                 .pathParam(pathParams[0],pathParams[1])
@@ -81,7 +83,7 @@ public class APIUtils {
                 .then().log().all()
                 .extract().response();
     }
-    public static Response sendPostRequest(RequestSpecification request, String url){
+    public static Response sendPostRequest(String url){
         return request
                 .contentType(ContentType.JSON)
                 .when()
@@ -89,7 +91,7 @@ public class APIUtils {
                 .then().log().all()
                 .extract().response();
     }
-    public static Response sendPutRequest(RequestSpecification request, String url,Object payload){
+    public static Response sendPutRequest(String url,Object payload){
         return request
                 .contentType(ContentType.JSON)
                 .body(payload)
@@ -98,7 +100,7 @@ public class APIUtils {
                 .then().log().all()
                 .extract().response();
     }
-    public static Response sendPutRequest(RequestSpecification request, String url,Object payload,Map<String,String> queryParams) {
+    public static Response sendPutRequest(String url,Object payload,Map<String,String> queryParams) {
         return request
                 .contentType(ContentType.JSON)
                 .body(payload)
@@ -109,7 +111,7 @@ public class APIUtils {
                 .log().all()
                 .extract().response();
     }
-    public static Response sendPutRequest(RequestSpecification request, String url,Object payload,Object[] pathParameters) {
+    public static Response sendPutRequest(String url,Object payload,Object[] pathParameters) {
         return request
                 .contentType(ContentType.JSON)
                 .body(payload)
@@ -120,7 +122,7 @@ public class APIUtils {
                 .log().all()
                 .extract().response();
     }
-    public static Response sendPutRequest(RequestSpecification request, String url,Object[] pathParameters) {
+    public static Response sendPutRequest(String url,Object[] pathParameters) {
         return request
                 .contentType(ContentType.JSON)
                 .pathParam(String.valueOf(pathParameters[0]),String.valueOf(pathParameters[1]))
@@ -130,7 +132,7 @@ public class APIUtils {
                 .log().all()
                 .extract().response();
     }
-    public static Response sendPutRequest(RequestSpecification request, String url,Object payload,Map<String,String> queryParams,String[] pathParameters) {
+    public static Response sendPutRequest(String url,Object payload,Map<String,String> queryParams,String[] pathParameters) {
         return request
                 .pathParam(pathParameters[0],pathParameters[1])
                 .contentType(ContentType.JSON)
