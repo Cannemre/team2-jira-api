@@ -7,6 +7,8 @@ import io.cucumber.java.Scenario;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Locale;
+
 public class Hooks extends BaseSteps {
 
 	private static final Logger logger = LogManager.getLogger(Hooks.class);
@@ -15,6 +17,7 @@ public class Hooks extends BaseSteps {
 	public void setUp(Scenario scenario) {
 		logger.info("::::::::::::::: TEST INFORMARION :::::::::::::::");
 		logger.info("Executing scenario: " + scenario.getName());
+		Locale.setDefault(Locale.US);
 	}
 
 	@After
