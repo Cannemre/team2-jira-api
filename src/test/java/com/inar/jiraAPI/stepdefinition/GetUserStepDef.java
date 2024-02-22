@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class GetUserStepDef extends BaseSteps {
     private static final Logger logger = LogManager.getLogger(GetUserStepDef.class);
 
@@ -46,5 +47,17 @@ public class GetUserStepDef extends BaseSteps {
         Assertions.assertThat(actualUser.getSelf()).isEqualTo(expectedUser.getSelf());
         Assertions.assertThat(actualUser.isActive()).isEqualTo(expectedUser.isActive());
         Assertions.assertThat(actualUser).isEqualTo(expectedUser);
+    }
+
+    @When("I send a GET request to with account {string} for a specific user")
+    public void iSendAGETRequestToWithAccountForASpecificUser(String accountID) {
+        queryParams.put("accountId", accountID);
+        response = sendGetRequest(getUsersEndPoint, queryParams);
+    }
+
+    @And("The response account ID of users should match {string}")
+    public void theResponseAccountIDOfUsersShouldMatch(String accountID) {
+        actualUser = response.as(User.class);
+        Assertions.assertThat(actualUser.getAccountId()).isEqualTo(accountID);
     }
 }
