@@ -13,7 +13,7 @@ public class Hooks extends BaseSteps {
 
 	@Before
 	public void setUp(Scenario scenario) {
-		logger.info("::::::::::::::: TEST INFORMARION :::::::::::::::");
+		logger.info("::::::::::::::: TEST INFORMATION :::::::::::::::");
 		logger.info("Executing scenario: " + scenario.getName());
 	}
 

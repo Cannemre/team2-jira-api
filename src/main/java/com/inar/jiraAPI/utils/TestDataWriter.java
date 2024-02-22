@@ -9,7 +9,7 @@ public class TestDataWriter {
     static ObjectMapper objectMapper = new ObjectMapper();
 
     public static void writeData(Object object, String path) throws FileNotFoundException {
-        FileOutputStream fileOutputStream = new FileOutputStream("workspace/team2-jira-api/src/test/resources/test_data/" + path);
+        FileOutputStream fileOutputStream = new FileOutputStream(System.getProperty("user.dir") + "/src/test/resources/test_data/" + path);
 
         try {
             objectMapper.writeValue(fileOutputStream, object);
