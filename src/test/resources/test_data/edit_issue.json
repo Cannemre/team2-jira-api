@@ -1,0 +1,20 @@
+{
+  "update": {
+    "labels": [
+      {
+        "add": "API"
+      },
+      {
+        "remove": "PUT"
+      },
+      {
+        "remove": "this_label_is_added_via_API"
+      }
+    ],
+    "summary": [
+      {
+        "set": "Edit Issue (GS)"
+      }
+    ]
+  }
+}
