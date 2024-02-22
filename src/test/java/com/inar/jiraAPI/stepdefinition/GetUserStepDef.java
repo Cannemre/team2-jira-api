@@ -1,16 +1,21 @@
 package com.inar.jiraAPI.stepdefinition;
 
 import com.inar.jiraAPI.javabeans.response.User;
+import com.inar.jiraAPI.stepdefinition.hook.Hooks;
 import com.inar.jiraAPI.utils.ConfigManager;
 import com.inar.jiraAPI.utils.TestDataReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.assertj.core.api.Assertions;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 public class GetUserStepDef extends BaseSteps {
+    private static final Logger logger = LogManager.getLogger(GetUserStepDef.class);
+
 
     Map<String, String> queryParams = new HashMap<>();
     User expectedUser;
@@ -40,6 +45,6 @@ public class GetUserStepDef extends BaseSteps {
         Assertions.assertThat(actualUser.getAccountType()).isEqualTo(expectedUser.getAccountType());
         Assertions.assertThat(actualUser.getSelf()).isEqualTo(expectedUser.getSelf());
         Assertions.assertThat(actualUser.isActive()).isEqualTo(expectedUser.isActive());
-
+        Assertions.assertThat(actualUser).isEqualTo(expectedUser);
     }
 }
