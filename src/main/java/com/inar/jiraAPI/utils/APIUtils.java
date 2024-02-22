@@ -4,6 +4,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
+import java.io.File;
 import java.util.Map;
 
 public class APIUtils {
@@ -142,6 +143,39 @@ public class APIUtils {
                 .put(url + "/{"+pathParameters[0]+"}")
                 .then()
                 .log().all()
+                .extract().response();
+    }
+
+    public static Response sendPutRequest(String url,Object payload,String key) {
+        return request
+                .contentType(ContentType.JSON)
+                .body(payload)
+                .when()
+                .put(url + "/key")
+                .then()
+                .log().all()
+                .extract().response();
+    }
+
+    public static Response sendPostRequest(String url, String key){
+        return request
+                .header("X-Atlassian-Token", "no-check")
+                .contentType(ContentType.MULTIPART)
+                .multiPart("file", new File("C:\\Users\\Gürkan\\Desktop\\Screenshot_4.png"))
+                .when()
+                .post(url + "/" + key + "/attachments" )
+                .then().log().all()
+                .extract().response();
+    }
+
+    public static Response sendPostRequest(String url, String key, String fileName){
+        return request
+                .header("X-Atlassian-Token", "no-check")
+                .contentType(ContentType.MULTIPART)
+                .multiPart("file", new File("C:\\Users\\Gürkan\\Desktop\\" + fileName))
+                .when()
+                .post(url + "/" + key + "/attachments" )
+                .then().log().all()
                 .extract().response();
     }
 }
