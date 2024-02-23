@@ -4,9 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateIssue{
-	private Fields fields;
+public class ContentItem{
+	private String type;
+	private List<ContentInner> content;
+
 }

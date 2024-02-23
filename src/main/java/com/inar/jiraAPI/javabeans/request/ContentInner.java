@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateIssue{
-	private Fields fields;
+public class ContentInner {
+    private String text;
+    private String type;
+
 }

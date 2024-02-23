@@ -7,6 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateIssue{
-	private Fields fields;
+public class Issuetype{
+	private String name;
 }
