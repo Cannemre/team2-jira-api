@@ -14,7 +14,7 @@ public class TestDataReader {
 
     public static <T> T readData(String path, Class<T> valueType) throws IOException {
         try {
-            fileInputStream = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/test_data" + path);
+            fileInputStream = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/test_data/" + path);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -23,7 +23,7 @@ public class TestDataReader {
     }
     public static <T> List<T> readDataList(String path, Class<T> valueType) throws IOException {
         try {
-            fileInputStream = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/test_data" + path);
+            fileInputStream = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/test_data/" + path);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }

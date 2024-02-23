@@ -23,3 +23,10 @@ public class CommonSteps extends BaseSteps {
         Assertions.assertThat(response.getStatusCode()).isEqualTo(httpStatusCode);
     }
 }
+
+
+/**
+ *  String expectedText = addComment.getBody().getContent().get(0).getContent().get(0).getText();
+ *
+ *         String actualText = response.jsonPath().getString("body.content[0].content[0].text");
+ */
