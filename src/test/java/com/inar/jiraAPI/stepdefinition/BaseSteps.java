@@ -11,6 +11,7 @@ public abstract class BaseSteps extends APIUtils {
 	static protected Response response;
 
 	public BaseSteps() {
+
 		baseURI = ConfigManager.getProperty("base.uri");
 	}
 

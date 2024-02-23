@@ -112,4 +112,6 @@ public class GetAllUserStepDef extends BaseSteps {
         }};
         response = sendGetRequest(getAllUsersEndPoint,queryParams);
     }
+
+
 }

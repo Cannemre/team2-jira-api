@@ -36,10 +36,5 @@ public class GetIssueStepDef extends BaseSteps {
     }
 
 
-    @And("The error message should be displayed")
-    public void theErrorMessageShouldBeDisplayed() {
-        String errorMessage = (String) response.jsonPath().getList("errorMessages").get(0);
-        Assertions.assertThat(errorMessage).isNotEmpty();
-        logger.info("The user receive error message");
-    }
+
 }
