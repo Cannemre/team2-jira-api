@@ -8,8 +8,8 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ContentItem{
+public class Body{
 	private String type;
+	private int version;
 	private List<ContentItem> content;
-	private String text;
 }

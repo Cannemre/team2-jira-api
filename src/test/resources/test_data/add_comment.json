@@ -1,0 +1,17 @@
+{
+  "body": {
+    "content": [
+      {
+        "content": [
+          {
+            "text": "The comment is added by Fatih Satan",
+            "type": "text"
+          }
+        ],
+        "type": "paragraph"
+      }
+    ],
+    "type": "doc",
+    "version": 1
+  }
+}
