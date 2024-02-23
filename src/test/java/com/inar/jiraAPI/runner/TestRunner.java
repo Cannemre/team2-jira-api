@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
 				"rerun:target/rerun.txt" },
 		features = "src/test/resources/features",
 		glue = "com.inar.jiraAPI.stepdefinition",
-		tags = "@king",
+		tags = "@delete",
 		dryRun = true)
 
 public class TestRunner {
