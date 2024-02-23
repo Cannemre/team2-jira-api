@@ -144,4 +144,8 @@ public class APIUtils {
                 .log().all()
                 .extract().response();
     }
+    public static Response sendDeleteRequest(String endpoint){
+        return request.when()
+                .delete(endpoint);
+    }
 }
