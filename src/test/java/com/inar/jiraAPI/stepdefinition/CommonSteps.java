@@ -27,6 +27,7 @@ public class CommonSteps extends BaseSteps {
             }
         }
         request = RestAssured.given().auth().preemptive().basic(username, token);
+        logger.info("Request is set to valid auth");
     }
     @Given("The authentication is made with invalid token to connect with api endpoints")
     public void theAuthenticationIsMadeWithInvalidTokenToConnectWithApiEndpoints() {
@@ -38,7 +39,7 @@ public class CommonSteps extends BaseSteps {
             }
         }
         request = RestAssured.given().auth().preemptive().basic(username, "invalidTokenStandsHere");
-
+        logger.info("Request is set to invalid token");
     }
     @Given("The authentication is made with invalid username to connect with api endpoints")
     public void theAuthenticationIsMadeWithInvalidUsernameToConnectWithApiEndpoints() {
@@ -50,6 +51,8 @@ public class CommonSteps extends BaseSteps {
             }
         }
         request = RestAssured.given().auth().preemptive().basic("fakeid@gmail.com", token);
+        logger.info("Request is set to invalid username");
+
     }
 
     @Given("The authentication is made with invalid content type to connect with api endpoints")
@@ -63,6 +66,8 @@ public class CommonSteps extends BaseSteps {
             }
         }
         request = RestAssured.given().auth().preemptive().basic(username, token).header("Accept","plain/text");
+        logger.info("Request is set to invalid contentType");
+
     }
 
     @Then("Response status code should be {int}")

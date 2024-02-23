@@ -3,7 +3,9 @@ package com.inar.jiraAPI.utils;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.checkerframework.checker.units.qual.K;
 
+import java.io.File;
 import java.util.Map;
 
 public class APIUtils {
@@ -144,8 +146,62 @@ public class APIUtils {
                 .log().all()
                 .extract().response();
     }
-    public static Response sendDeleteRequest(String endpoint){
+
+    public static Response sendPutRequest(String url,Object payload,String key) {
+        return request
+                .contentType(ContentType.JSON)
+                .body(payload)
+                .when()
+                .put(url + "/key")
+                .then()
+                .log().all()
+                .extract().response();
+    }
+
+    public static Response sendPostRequest(String url, String key){
+        return request
+                .header("X-Atlassian-Token", "no-check")
+                .contentType(ContentType.MULTIPART)
+                .multiPart("file", new File("C:\\Users\\Gürkan\\Desktop\\Screenshot_4.png"))
+                .when()
+                .post(url + "/" + key + "/attachments" )
+                .then().log().all()
+                .extract().response();
+    }
+
+    public static Response sendPostRequest(String url, String key, String fileName){
+        return request
+                .header("X-Atlassian-Token", "no-check")
+                .contentType(ContentType.MULTIPART)
+                .multiPart("file", new File("C:\\Users\\Gürkan\\Desktop\\" + fileName))
+                .when()
+                .post(url + "/" + key + "/attachments" )
+                .then().log().all()
+                .extract().response();
+    }
+    public static Response sendDeleteRequest(String url, String[] pathParam){
+        return request
+                .contentType(ContentType.JSON)
+                .when()
+                .pathParams(pathParam[0],pathParam[1])
+                .delete(url + "/{" + pathParam[0] + "}")
+                .then()
+                .extract().response();
+    }
+    public static Response sendDeleteRequest(String url, String[] pathParam,Map<String,Boolean> queryParams){
+        return request
+                .contentType(ContentType.JSON)
+                .when()
+                .pathParams(pathParam[0],pathParam[1])
+                .queryParams(queryParams)
+                .delete(url + "/{" + pathParam[0] + "}")
+                .then()
+                .extract().response();
+    }
+    
+      public static Response sendDeleteRequest(String endpoint){
         return request.when()
                 .delete(endpoint);
+      
     }
 }

@@ -6,6 +6,8 @@ import com.inar.jiraAPI.utils.TestDataReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import io.restassured.common.mapper.TypeRef;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.assertj.core.api.Assertions;
 
 import java.io.IOException;
@@ -14,6 +16,8 @@ import java.util.List;
 import java.util.Map;
 
 public class FindUsersStepDef extends BaseSteps{
+
+    private static final Logger logger = LogManager.getLogger(FindUsersStepDef.class);
 
     String findUsersEndPoint = ConfigManager.getProperty("api.findUsersEndPoint");
     Map<String, String> queryParams = new HashMap<>();
@@ -32,6 +36,7 @@ public class FindUsersStepDef extends BaseSteps{
     @And("The response email address of users should match {string}")
     public void theResponseEmailAddressOfUsersShouldMatch(String email) {
         Assertions.assertThat(users.get(0).getEmailAddress()).isEqualTo(email);
+        logger.info("Assertion for match email address");
     }
 
     @When("I send a GET request to with user {string} for a specific user")
@@ -57,5 +62,6 @@ public class FindUsersStepDef extends BaseSteps{
         Assertions.assertThat(actualUser.get(0).getSelf()).isEqualTo(expectedUser.getSelf());
         Assertions.assertThat(actualUser.get(0).isActive()).isEqualTo(expectedUser.isActive());
         Assertions.assertThat(actualUser.get(0).getLocale()).isEqualTo(expectedUser.getLocale());
+        logger.info("Assertion for user details");
     }
 }
