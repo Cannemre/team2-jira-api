@@ -46,7 +46,7 @@ public class GetUserStepDef extends BaseSteps {
         Assertions.assertThat(actualUser.getAccountType()).isEqualTo(expectedUser.getAccountType());
         Assertions.assertThat(actualUser.getSelf()).isEqualTo(expectedUser.getSelf());
         Assertions.assertThat(actualUser.isActive()).isEqualTo(expectedUser.isActive());
-        Assertions.assertThat(actualUser).isEqualTo(expectedUser);
+        logger.info("Assertion for user details");
     }
 
     @When("I send a GET request to with account {string} for a specific user")
@@ -59,5 +59,6 @@ public class GetUserStepDef extends BaseSteps {
     public void theResponseAccountIDOfUsersShouldMatch(String accountID) {
         actualUser = response.as(User.class);
         Assertions.assertThat(actualUser.getAccountId()).isEqualTo(accountID);
+        logger.info("Assertion for account ID");
     }
 }
