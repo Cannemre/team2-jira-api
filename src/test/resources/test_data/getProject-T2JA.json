@@ -1,0 +1,97 @@
+{
+  "expand": "description,lead,issueTypes,url,projectKeys,permissions,insight",
+  "self": "https://inaracademyteam2.atlassian.net/rest/api/3/project/10004",
+  "id": "10004",
+  "key": "T2JA",
+  "description": "",
+  "lead": {
+    "self": "https://inaracademyteam2.atlassian.net/rest/api/3/user?accountId=712020:dfc25f9c-fceb-4b4a-9bce-71ab738cd69c",
+    "accountId": "712020:dfc25f9c-fceb-4b4a-9bce-71ab738cd69c",
+    "avatarUrls": {
+      "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:dfc25f9c-fceb-4b4a-9bce-71ab738cd69c/4584205d-0a86-48f0-beed-f40dd35b6f56/48",
+      "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:dfc25f9c-fceb-4b4a-9bce-71ab738cd69c/4584205d-0a86-48f0-beed-f40dd35b6f56/24",
+      "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:dfc25f9c-fceb-4b4a-9bce-71ab738cd69c/4584205d-0a86-48f0-beed-f40dd35b6f56/16",
+      "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:dfc25f9c-fceb-4b4a-9bce-71ab738cd69c/4584205d-0a86-48f0-beed-f40dd35b6f56/32"
+    },
+    "displayName": "Emre Can",
+    "active": true
+  },
+  "components": [
+  ],
+  "issueTypes": [
+    {
+      "self": "https://inaracademyteam2.atlassian.net/rest/api/3/issuetype/10022",
+      "id": "10022",
+      "description": "Stories track functionality or features expressed as user goals.",
+      "iconUrl": "https://inaracademyteam2.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+      "name": "Story",
+      "subtask": false,
+      "avatarId": 10315,
+      "hierarchyLevel": 0
+    },
+    {
+      "self": "https://inaracademyteam2.atlassian.net/rest/api/3/issuetype/10023",
+      "id": "10023",
+      "description": "Tasks track small, distinct pieces of work.",
+      "iconUrl": "https://inaracademyteam2.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+      "name": "Task",
+      "subtask": false,
+      "avatarId": 10318,
+      "hierarchyLevel": 0
+    },
+    {
+      "self": "https://inaracademyteam2.atlassian.net/rest/api/3/issuetype/10024",
+      "id": "10024",
+      "description": "Bugs track problems or errors.",
+      "iconUrl": "https://inaracademyteam2.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+      "name": "Bug",
+      "subtask": false,
+      "avatarId": 10303,
+      "hierarchyLevel": 0
+    },
+    {
+      "self": "https://inaracademyteam2.atlassian.net/rest/api/3/issuetype/10025",
+      "id": "10025",
+      "description": "Epics track collections of related bugs, stories, and tasks.",
+      "iconUrl": "https://inaracademyteam2.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10307?size=medium",
+      "name": "Epic",
+      "subtask": false,
+      "avatarId": 10307,
+      "hierarchyLevel": 1
+    },
+    {
+      "self": "https://inaracademyteam2.atlassian.net/rest/api/3/issuetype/10026",
+      "id": "10026",
+      "description": "Subtasks track small pieces of work that are part of a larger task.",
+      "iconUrl": "https://inaracademyteam2.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10316?size=medium",
+      "name": "Subtask",
+      "subtask": true,
+      "avatarId": 10316,
+      "hierarchyLevel": -1
+    }
+  ],
+  "assigneeType": "UNASSIGNED",
+  "versions": [
+  ],
+  "name": "Team-2 JIRA API",
+  "roles": {
+    "atlassian-addons-project-access": "https://inaracademyteam2.atlassian.net/rest/api/3/project/10004/role/10023",
+    "Administrator": "https://inaracademyteam2.atlassian.net/rest/api/3/project/10004/role/10020",
+    "Viewer": "https://inaracademyteam2.atlassian.net/rest/api/3/project/10004/role/10022",
+    "Member": "https://inaracademyteam2.atlassian.net/rest/api/3/project/10004/role/10021"
+  },
+  "avatarUrls": {
+    "48x48": "https://inaracademyteam2.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10415",
+    "24x24": "https://inaracademyteam2.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10415?size=small",
+    "16x16": "https://inaracademyteam2.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10415?size=xsmall",
+    "32x32": "https://inaracademyteam2.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10415?size=medium"
+  },
+  "projectTypeKey": "software",
+  "simplified": true,
+  "style": "next-gen",
+  "isPrivate": false,
+  "properties": {
+  },
+  "entityId": "14c0b281-103b-483b-8231-d6a581e10799",
+  "uuid": "14c0b281-103b-483b-8231-d6a581e10799"
+}

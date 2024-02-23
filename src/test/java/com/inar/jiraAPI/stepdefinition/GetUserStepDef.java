@@ -1,7 +1,6 @@
 package com.inar.jiraAPI.stepdefinition;
 
 import com.inar.jiraAPI.javabeans.response.User;
-import com.inar.jiraAPI.stepdefinition.hook.Hooks;
 import com.inar.jiraAPI.utils.ConfigManager;
 import com.inar.jiraAPI.utils.TestDataReader;
 import io.cucumber.java.en.And;

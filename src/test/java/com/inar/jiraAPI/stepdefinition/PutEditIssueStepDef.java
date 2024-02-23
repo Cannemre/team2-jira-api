@@ -1,13 +1,11 @@
 package com.inar.jiraAPI.stepdefinition;
 
-import com.inar.jiraAPI.javabeans.request.EditIssue;
+import com.inar.jiraAPI.javabeans.request.editIssue.EditIssue;
 import com.inar.jiraAPI.utils.ConfigManager;
 import com.inar.jiraAPI.utils.TestDataReader;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.assertj.core.api.Assertions;
 
 import java.io.IOException;
 

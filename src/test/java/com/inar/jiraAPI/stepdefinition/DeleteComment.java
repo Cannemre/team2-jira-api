@@ -1,6 +1,5 @@
 package com.inar.jiraAPI.stepdefinition;
 
-import com.inar.jiraAPI.javabeans.request.ContentItem;
 import com.inar.jiraAPI.utils.ConfigManager;
 import io.cucumber.java.en.When;
 
