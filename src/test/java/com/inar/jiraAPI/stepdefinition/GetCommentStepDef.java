@@ -18,11 +18,6 @@ public class GetCommentStepDef extends BaseSteps {
         logger.debug("The user sends get request to the Get Comment endpoint with specific key and specific id");
     }
 
-    @And("The Time should be under {int} ms on the response")
-    public void theTimeShouldBeUnderMsOnTheResponse(int time) {
-        Assertions.assertThat(response.getTime()).isLessThan(time);
-        logger.info("The time should be under expected millisecond on the response");
-    }
 
     @And("The response text should match {string}")
     public void theResponseTextShouldBe(String text) {

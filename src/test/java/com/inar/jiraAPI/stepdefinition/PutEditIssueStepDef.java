@@ -29,9 +29,4 @@ public class PutEditIssueStepDef extends BaseSteps {
         logger.info("I send a PUT request to edit issue");
     }
 
-    @And("The Time should be under {int} ms on the response")
-    public void theTimeShouldBeUnderIntMsOnTheResponse(int time) {
-
-        Assertions.assertThat(response.getTime()).as("The time has exceeded its limitations").isLessThan(time);
-    }
 }

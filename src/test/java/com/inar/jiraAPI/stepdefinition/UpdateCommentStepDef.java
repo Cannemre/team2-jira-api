@@ -43,10 +43,4 @@ public class UpdateCommentStepDef extends BaseSteps {
 
     }
 
-    @And("The error message should be displayed")
-    public void theErrorMessageShouldBeDisplayed() {
-        String errorMessage = response.asPrettyString();
-        assertThat(errorMessage).contains("error");
-        logger.info("The user should see error message");
-    }
 }

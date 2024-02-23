@@ -2,6 +2,7 @@ package com.inar.jiraAPI.stepdefinition;
 
 import com.inar.jiraAPI.javabeans.request.BadRequest;
 import com.inar.jiraAPI.stepdefinition.hook.Hooks;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
@@ -87,5 +88,19 @@ public class CommonSteps extends BaseSteps {
         }
         BadRequest badRequest = new BadRequest("Jason","Application");
         request = RestAssured.given().auth().preemptive().basic(username, token).body(badRequest);
+    }
+
+
+    @And("The Time should be under {int} ms on the response")
+    public void theTimeShouldBeUnderMsOnTheResponse(int time) {
+        Assertions.assertThat(response.getTime()).isLessThan(time);
+        logger.info("The time should be under expected millisecond on the response");
+    }
+
+    @And("The error message should be displayed")
+    public void theErrorMessageShouldBeDisplayed() {
+        String errorMessage = (String) response.jsonPath().getList("errorMessages").get(0);
+        Assertions.assertThat(errorMessage).isNotEmpty();
+        logger.info("The user receive error message");
     }
 }
