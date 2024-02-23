@@ -1,6 +1,6 @@
 package com.inar.jiraAPI.stepdefinition;
 
-import com.inar.jiraAPI.request.UpdateComment;
+import com.inar.jiraAPI.javabeans.request.comment.AddComment;
 import com.inar.jiraAPI.utils.ConfigManager;
 import com.inar.jiraAPI.utils.TestDataReader;
 import io.cucumber.java.en.And;
@@ -16,13 +16,13 @@ import static org.assertj.core.api.BDDAssertions.then;
 public class UpdateCommentStepDef extends BaseSteps {
     private static final Logger logger = LogManager.getLogger(UpdateCommentStepDef.class);
     String updateCommentEndpoint;
-    UpdateComment updateComment;
+    AddComment updateComment;
 
     @When("The user sends PUT request to the Update Comment endpoint with specific issue key {string} and comment id as {string}")
     public void theUserSendsPUTRequestToTheUpdateCommentEndpointWithSpecificIssueKeyAndCommentIdAs(String issueKey, String commentId) throws IOException {
-        updateComment = TestDataReader.readData("update_comment.json", UpdateComment.class);
+        updateComment = TestDataReader.readData("update_comment.json", AddComment.class);
         updateCommentEndpoint = ConfigManager.getProperty("api.comment.endpoint") + "/" + issueKey + "/comment/" + commentId;
-        response = sendGetRequest(updateCommentEndpoint, updateComment);
+        response = sendPutRequest(updateCommentEndpoint, updateComment);
         logger.debug("The user sends PUT request to the Update Comment endpoint with specific issue key and comment id as");
     }
 
@@ -36,9 +36,9 @@ public class UpdateCommentStepDef extends BaseSteps {
 
     @When("The user sends PUT request to the Update Comment endpoint with specific issue key {string} and invalid comment id as {string}")
     public void theUserSendsPutRequestToTheUpdateCommentEndpointWithSpecificIssueKeyAndInvalidCommentId(String issueKey, String commentId) throws IOException {
-        updateComment = TestDataReader.readData("update_comment.json", UpdateComment.class);
+        updateComment = TestDataReader.readData("update_comment.json", AddComment.class);
         updateCommentEndpoint = ConfigManager.getProperty("api.comment.endpoint") + "/" + issueKey + "/comment/" + commentId;
-        response = sendGetRequest(updateCommentEndpoint, updateComment);
+        response = sendPutRequest(updateCommentEndpoint, updateComment);
         logger.debug("The user sends PUT request to the Update Comment endpoint with specific issue key and invalid comment id as");
 
     }

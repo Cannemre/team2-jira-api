@@ -1,0 +1,42 @@
+[
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys,permissions,insight",
+    "self": "https://inaracademyteam2.atlassian.net/rest/api/3/project/10004",
+    "id": "10004",
+    "key": "T2JA",
+    "name": "Team-2 JIRA API",
+    "avatarUrls": {
+      "48x48": "https://inaracademyteam2.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10415",
+      "24x24": "https://inaracademyteam2.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10415?size=small",
+      "16x16": "https://inaracademyteam2.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10415?size=xsmall",
+      "32x32": "https://inaracademyteam2.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10415?size=medium"
+    },
+    "projectTypeKey": "software",
+    "simplified": true,
+    "style": "next-gen",
+    "isPrivate": false,
+    "properties": {},
+    "entityId": "14c0b281-103b-483b-8231-d6a581e10799",
+    "uuid": "14c0b281-103b-483b-8231-d6a581e10799"
+  },
+  {
+    "expand": "description,lead,issueTypes,url,projectKeys,permissions,insight",
+    "self": "https://inaracademyteam2.atlassian.net/rest/api/3/project/10000",
+    "id": "10000",
+    "key": "TEAM2",
+    "name": "Team2 Scrum",
+    "avatarUrls": {
+      "48x48": "https://inaracademyteam2.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10552",
+      "24x24": "https://inaracademyteam2.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10552?size=small",
+      "16x16": "https://inaracademyteam2.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10552?size=xsmall",
+      "32x32": "https://inaracademyteam2.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10552?size=medium"
+    },
+    "projectTypeKey": "software",
+    "simplified": true,
+    "style": "next-gen",
+    "isPrivate": false,
+    "properties": {},
+    "entityId": "0b380d56-1802-4fb7-b232-da7bfe01c206",
+    "uuid": "0b380d56-1802-4fb7-b232-da7bfe01c206"
+  }
+]

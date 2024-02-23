@@ -173,7 +173,7 @@ public class APIUtils {
         return request
                 .header("X-Atlassian-Token", "no-check")
                 .contentType(ContentType.MULTIPART)
-                .multiPart("file", new File("C:\\Users\\Gürkan\\Desktop\\" + fileName))
+                .multiPart("file", new File(System.getProperty("user.dir") + "/src/test/resources/attachment/" + fileName))
                 .when()
                 .post(url + "/" + key + "/attachments" )
                 .then().log().all()

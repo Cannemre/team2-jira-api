@@ -1,6 +1,6 @@
 package com.inar.jiraAPI.stepdefinition;
 
-import com.inar.jiraAPI.javabeans.request.CreateIssue;
+import com.inar.jiraAPI.javabeans.request.createissue.CreateIssue;
 import com.inar.jiraAPI.utils.ConfigManager;
 import com.inar.jiraAPI.utils.TestDataReader;
 import io.cucumber.java.en.And;

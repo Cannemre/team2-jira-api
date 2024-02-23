@@ -1,7 +1,6 @@
 package com.inar.jiraAPI.stepdefinition;
 
-import com.inar.jiraAPI.javabeans.request.AddComment;
-import com.inar.jiraAPI.javabeans.response.User;
+import com.inar.jiraAPI.javabeans.request.comment.AddComment;
 import com.inar.jiraAPI.utils.APIUtils;
 import com.inar.jiraAPI.utils.ConfigManager;
 import com.inar.jiraAPI.utils.TestDataReader;
@@ -12,7 +11,6 @@ import org.apache.logging.log4j.Logger;
 import org.assertj.core.api.Assertions;
 
 import java.io.IOException;
-import java.util.List;
 
 public class AddCommentStepDef extends BaseSteps {
     AddComment addComment;
