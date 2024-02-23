@@ -198,4 +198,10 @@ public class APIUtils {
                 .then()
                 .extract().response();
     }
+    
+      public static Response sendDeleteRequest(String endpoint){
+        return request.when()
+                .delete(endpoint);
+      
+    }
 }
