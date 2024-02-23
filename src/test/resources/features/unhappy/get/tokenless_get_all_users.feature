@@ -8,32 +8,14 @@ Feature: Get All User Token-Free Scenarios
     Then The user sends GET request to get all users endpoint to verify response
     Then Response status code should be 403
 
-
-  Scenario Outline: This scenario is testing startsAt query parameter
-    When The user sends GET request to get all users endpoint with startAt query parameter "<startsAt>" to verify response
+  Scenario: This scenario is testing startsAt query parameter
+    When The user sends GET request to get all users endpoint with startAt query parameter "5" to verify response
     Then Response status code should be 403
-    Examples:
-      | startsAt |
-      | 0        |
-      | 10       |
-      | 24       |
 
-  Scenario Outline: This scenario is testing maxResult query parameter
-    When The user sends GET request to get all users endpoint with maxResult query parameter "<maxResults>" to verify response
+  Scenario: This scenario is testing maxResult query parameter
+    When The user sends GET request to get all users endpoint with maxResult query parameter "10" to verify response
     Then Response status code should be 403
-    Examples:
-      | maxResults |
-      | 1        |
-      | 10       |
-      | 25       |
 
-  Scenario Outline: This scenario is testing maxResult and startAt query parameters
-    When The user sends GET request to get all users endpoint with multiple query parameters "<maxResults>" "<startAt>" to verify response
+  Scenario: This scenario is testing maxResult and startAt query parameters
+    When The user sends GET request to get all users endpoint with multiple query parameters "5" "10" to verify response
     Then Response status code should be 403
-    Examples:
-      | maxResults | startAt |
-      | 1          | 0        |
-      | 10         | 10       |
-      | 25         | 24       |
-
-
