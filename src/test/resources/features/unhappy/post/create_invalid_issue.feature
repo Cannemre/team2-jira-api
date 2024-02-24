@@ -1,3 +1,4 @@
+@all
 Feature: Create issue
   Background:
     Given The authentication is made to connect with api endpoints

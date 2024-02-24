@@ -1,3 +1,4 @@
+@all @smoke
 Feature: Retrieve Recent Projects from JIRA
 
   Background:

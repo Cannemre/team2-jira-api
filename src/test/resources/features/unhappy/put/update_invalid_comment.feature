@@ -1,3 +1,4 @@
+@all
 Feature: Invalid update comment
 
   Background:

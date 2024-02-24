@@ -1,3 +1,4 @@
+@all @smoke
 Feature: This feature is about adding a comment
   Background:
     Given The authentication is made to connect with api endpoints

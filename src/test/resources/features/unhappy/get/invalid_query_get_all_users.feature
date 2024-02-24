@@ -1,3 +1,4 @@
+@all
 Feature: This scenario sends invalid query params
 
   Background:

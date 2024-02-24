@@ -1,3 +1,4 @@
+@all
 Feature: Update Comment
 
   Background:

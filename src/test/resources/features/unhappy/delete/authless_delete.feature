@@ -1,4 +1,4 @@
-@delete @failed
+@all @delete @failed
 Feature: This feature is considering auth
 
   Scenario: I try to delete an issue without a valid token

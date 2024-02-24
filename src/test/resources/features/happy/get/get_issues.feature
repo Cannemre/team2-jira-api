@@ -1,3 +1,4 @@
+@all @smoke
 Feature: Get issue
 
   Background:

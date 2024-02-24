@@ -1,3 +1,4 @@
+@all
 Feature: Find Users
   Background:
     Given The authentication is made to connect with api endpoints
@@ -8,7 +9,7 @@ Feature: Find Users
     And The response email address of users should match "<email>"
     Examples:
       | email             |
-      | ecan18@icloud.com |
+      | gnrl2@hotmail.com |
 
   Scenario Outline: Find a user with user name
     When I send a GET request to with user "<name>" for a specific user

@@ -1,3 +1,4 @@
+@all @smoke
 Feature: Edit Issue
 
   Background:

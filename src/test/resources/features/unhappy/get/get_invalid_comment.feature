@@ -1,3 +1,4 @@
+@all
 Feature: Get Invalid Comment
 
   Background:
